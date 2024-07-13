@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="hotel-detail">
+    <div class="baslik2">
+        <h1>{{ hotel.name }}</h1>
+    </div>
+    <div class="fiyat">
+        <p>{{ hotel.price }} TL</p>
+    </div>
+    <div class="konum">
+        <p><i class="fa-solid fa-location-dot"></i>{{ hotel.location }}</p>
+    </div>
+    <div class="aciklama">
+        <p>{{ hotel.description }}</p>
+    </div>
+    <div class="hotel-images">
+        <h2>Resimler</h2>
+        {% for image in hotel.images.all %}
+        <img src="{{ image.image.url }}" alt="{{ hotel.name }}" width="300px">
+        {% endfor %}
+    </div>
+</div>
+
+
+<div class="yorumcont">
+    <div class="yorumbg">
+        <img src="{% static 'img/resim5.jpg' %}" alt="" width="100%">
+    </div>
+    <div class="ozellik">
+        <h2>Odalarımızdaki</h2>
+    </div>
+    <div class="ozellik2">
+        <h1>Özellikler</h1>
+    </div>
+    <div class="liste">
+        <ul>
+            <li><i class="fa-solid fa-wifi"></i>Ücretsiz Kablosuz İnternet</li>
+            <li><i class="fa-solid fa-martini-glass-empty"></i>Mini-bar</li>
+            <li><i class="fa-solid fa-dharmachakra"></i>Ayrı Oturma Odası</li>
+            <li><i class="fa-solid fa-tv"></i>Düz Ekran LCD TV</li>
+            <li><i class="fa-regular fa-closed-captioning"></i>Merkezi Isıtma</li>
+            <li><i class="fa-solid fa-wind"></i>Saç Kurutma Makinesi</li>
+            <li><i class="fa-solid fa-shoe-prints"></i>Havlu Ve Tamamlayıcı Terlikler</li>
+            <li><i class="fa-solid fa-ban-smoking"></i>Sigara İçilmez</li>
+            <li><i class="fa-solid fa-phone"></i>Telefon Hattı</li>
+            <li><i class="fa-solid fa-money-bill-transfer"></i>Ücretsiz Kasa</li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

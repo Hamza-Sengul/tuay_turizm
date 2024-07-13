@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+
+{% block content %}
+<div class="urunler">
+    {% for hotel in hotels %}
+    <div class="uruncard">
+      <div class="uruncardresim">
+        <a href="{% url 'hotel_detail' hotel.pk %}"
+          ><img
+            src="{{ hotel.main_image.url }}"
+            alt="{{ hotel.name }}"
+            width="280px"
+        /></a>
+      </div>
+      <div class="uruncardkalp">
+        <i class="fa-regular fa-heart" style="color: red"></i>
+      </div>
+      <div class="uruncardkesfet">
+        <div class="k">
+          <a href="{% url 'hotel_detail' hotel.pk %}"
+            ><i class="fa-solid fa-circle-info"></i>Keşfet</a
+          >
+        </div>
+      </div>
+      <div class="uruncardname">
+        <a href="{% url 'hotel_detail' hotel.pk %}">{{ hotel.name }}</a>
+      </div>
+      <div class="uruncardfiyat">
+        <a href="#">{{ hotel.price }} TL</a>
+      </div>
+      <div class="uruncardkonum">
+        <a href="#"
+          ><i class="fa-solid fa-location-dot" style="color: red"></i>{{ hotel.location }}</a
+        >
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+{% endblock %}

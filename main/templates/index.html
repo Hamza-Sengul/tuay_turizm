@@ -1,0 +1,127 @@
+{% extends "layout.html" %} {% load static %} {% block content %}
+
+<div class="hgcont">
+  <div class="hg1">
+    <h2>Huzur, Manzara ve Konfor</h2>
+  </div>
+  <div class="hg2">
+    <h1>xxxxx Hotel'e Hoşgeldiniz</h1>
+  </div>
+  <div class="hg3">
+    <p>
+      Özenle tasarlanmış Mağara Odalar ve Süitlerimiz, Kapadokya’nın doğal
+      güzelliklerine mükemmel bir uyum sağlayarak sıcak ve unutulmaz bir deneyim
+      sunuyor. Sizi Hezen Cave Hotel’de muhteşem Manzara ve Teras keyfiyle
+      ağırlamaktan mutluluk duyarız.
+    </p>
+  </div>
+  <div class="hg4">
+    <div class="button-borders">
+      <button class="primary-button">KEŞFET</button>
+    </div>
+  </div>
+</div>
+
+<!-- index.html -->
+<div class="urunler">
+  {% for hotel in hotels %}
+  <div class="uruncard">
+    <div class="uruncardresim">
+      <a href="{% url 'hotel_detail' hotel.pk %}"
+        ><img
+          src="{{ hotel.main_image.url }}"
+          alt="{{ hotel.name }}"
+          width="280px"
+      /></a>
+    </div>
+    <div class="uruncardkalp">
+      <i class="fa-regular fa-heart" style="color: red"></i>
+    </div>
+    <div class="uruncardkesfet">
+      <div class="k">
+        <a href="{% url 'hotel_detail' hotel.pk %}"
+          ><i class="fa-solid fa-circle-info"></i>Keşfet</a
+        >
+      </div>
+    </div>
+    <div class="uruncardname">
+      <a href="{% url 'hotel_detail' hotel.pk %}">{{ hotel.name }}</a>
+    </div>
+    <div class="uruncardfiyat">
+      <a href="#">{{ hotel.price }} TL</a>
+    </div>
+    <div class="uruncardkonum">
+      <a href="#"
+        ><i class="fa-solid fa-location-dot" style="color: red"></i>{{ hotel.location }}</a
+      >
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="hgcont">
+  <div class="hg1">
+    <h2>Kapadokya Keşfi</h2>
+  </div>
+  <div class="hg2">
+    <h1>Unutulmaz Bir Macera</h1>
+  </div>
+  <div class="hg3">
+    <p>
+      Kapadokya’nın büyülü dünyasını daha derinlemesine keşfetmek için sunulan
+      çeşitli turlar ve etkinlikler ile tatilinizi unutulmaz kılabilirsiniz.
+      Bölgenin eşsiz doğasını ve kültürel zenginliklerini keşfetmenize yardımcı
+      oluyoruz.
+    </p>
+  </div>
+  <div class="hg4">
+    <div class="button-borders">
+      <button class="primary-button">KEŞFET</button>
+    </div>
+  </div>
+</div>
+
+<div class="yorumcont">
+  <div class="yorumbg">
+    <img src="{% static 'img/resim5.jpg' %}" alt="" width="100%" />
+  </div>
+  <div class="yorum">
+    <i class="fa-regular fa-comment"></i>
+  </div>
+  <div class="yorumdetay">
+    <p>
+      18-23 Kasım tarihleri arasında otelde konakladık. Kendinizi evinizde
+      hissetmeniz için ellerinden geleni yapan muhteşem bir çalışma kadrosu var.
+      Girişte bizleri karşılayan Mehmet Bey ve Gökhan Bey, gezi planımızdan
+      tutun en ufak bir sıkıntımıza kadar her konuda yardımcı oldular. Mutfak
+      ekibi zaten bir harika. Her sabah poğaçaları, kurabiyeleri vb. gönül
+      rahatlığıyla çocuklarınıza yedirebileceğiniz ev lezzetlerini sunuyor. Bu
+      otelde duyacaklarınız ve görecekleriniz sizi çok şaşırtacak. Her sabah
+      isteğinize göre omlet, taze sıkılmış portakal suyu, çamaşırhanenin olması,
+      sınırsız içecek, sonsuz güler yüz, ilgi ve muhteşem manzara ile tek
+      kelimeyle…
+    </p>
+  </div>
+  <div class="yorumyazar">Zeynep Tutar - 2019 Google Yorumu</div>
+  <div class="yorum">
+    <i class="fa-regular fa-comment"></i>
+  </div>
+  <div class="yorumdetay">
+    <p>
+      Güler yüzlü, ilgili çalışanlar, insanı evinde gibi hissettiren sıcak,
+      samimi bir ortam sunuyor. Her gün tertemiz yapılan odalar, her sabah
+      taptaze ürünlerle kahvaltı, konum olarak Ortahisar Kalesi manzarası,
+      gezilecek yerlerle ilgili her gün kişiye özel bilgilendirme, güvene dayalı
+      konaklama ile cok güzel anılar biriktirdiğimiz bir otel. Dönerken içimizin
+      burulduğu, abartısız hayatımızda kaldığımız en iyi oteldi. Harika bir 6
+      gün geçirdik. Kapadokya’da gidilecek tek adres ve tavsiyemizdir bizim
+      için. İnşallah tekrardan görüşmek kısmet olur. Tüm ekibe Büşra & Emre
+      Çağlar çiftinden teşekkür ve selamlar, her şey için tekrar teşekkür
+      ederiz.
+    </p>
+  </div>
+  <div class="yorumyazar">Zeynep Tutar - 2019 Google Yorumu</div>
+  
+</div>
+
+{% endblock %}

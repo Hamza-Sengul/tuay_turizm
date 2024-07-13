@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="kk">
+    <div class="contact-card">
+        <div class="icon"><i class="fa-solid fa-phone"></i></div>
+        <h2>Telefon Numaramız</h2>
+        <p>+90 384 343 3005</p>
+    </div>
+    
+    <div class="contact-card">
+        <div class="icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+        <h2>Mobil Hatımız</h2>
+        <p>+90 501 257 3099</p>
+    </div>
+    
+    <div class="contact-card">
+        <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+        <h2>Konum</h2>
+        <p>Esentepe Mah. Tahir Bey sok. No 87<br>Ortahisar, Ürgüp, Kapadokya</p>
+    </div>
+</div>
+
+
+<div class="form2">
+    <form class="form">
+    
+        <div class="flex">
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>AD</span>
+            </label>
+    
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>SOYAD</span>
+            </label>
+        </div>  
+                
+        <label>
+            <input required="" placeholder="" type="email" class="input">
+            <span>EMAİL</span>
+        </label> 
+            
+        <label>
+            <input required="" type="tel" placeholder="" class="input">
+            <span>TELEFON NUMARASI</span>
+        </label>
+        <label>
+            <textarea required="" rows="3" placeholder="" class="input01"></textarea>
+            <span>MESAJINIZ...</span>
+        </label>
+        
+        <button class="fancy" href="#">
+          <span class="top-key"></span>
+          <span class="text">GÖNDER</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </button>
+    </form>
+</div>
+
+{% endblock %}
