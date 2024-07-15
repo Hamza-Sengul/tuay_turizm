@@ -1,12 +1,12 @@
 🌐 Tuay Turizm
 Tuay Turizm, otel bilgilerini dinamik olarak görüntülemek ve yönetmek için geliştirilmiş bir Django projesidir. Bu proje, otellerin adları, fiyatları, konumları ve açıklamaları gibi bilgileri içerir ve bunları kullanıcılara sunar. Ayrıca otel detaylarını ve birden fazla resmi içeren sayfalar oluşturur.
-
-📋 İçindekiler
-Kurulum
-Kullanım
-Proje Yapısı
-Özellikler
-Katkıda Bulunma
+<br>
+📋 İçindekiler <br>
+Kurulum <br>
+Kullanım <br>
+Proje Yapısı <br>
+Özellikler <br>
+Katkıda Bulunma <br>
 Lisans
 İletişim
 🚀 Kurulum <br>
