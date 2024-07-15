@@ -91,3 +91,101 @@ Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dos
 
 📞 İletişim
 Proje ile ilgili sorularınız veya önerileriniz için lütfen Hamza Şengül ile iletişime geçin.
+
+******************************
+
+🌐 Tuay Tourism
+Tuay Tourism is a Django project developed to dynamically display and manage hotel information. This project includes details such as hotel names, prices, locations, and descriptions, and presents them to users. It also creates pages with hotel details and multiple images.
+<br> <br>
+📋 Table of Contents <br>
+Installation <br>
+Usage <br>
+Project Structure <br>
+Features <br>
+Contributing <br>
+License <br>
+Contact <br> <br>
+🚀 Installation <br>
+Follow these steps to set up the project in your local environment: <br>
+<br><br>
+
+Clone this repository to your local machine: <br>
+git clone https://github.com/Hamza-Sengul/tuay_turizm.git <br><br>
+
+Navigate to the project directory: <br>
+cd tuay_turizm <br><br>
+
+Create a virtual environment: <br>
+python -m venv venv <br><br>
+
+Activate the virtual environment: <br>
+
+Windows: <br>
+venv\Scripts\activate <br>
+macOS/Linux: <br>
+source venv/bin/activate <br><br>
+Install the required dependencies: <br>
+pip install -r requirements.txt <br><br>
+
+Complete the database migrations: <br>
+python manage.py migrate <br><br>
+
+Start the development server: <br>
+python manage.py runserver <br><br>
+
+Open your browser and go to http://127.0.0.1:8000 to view the project. <br><br>
+
+🛠️ Usage <br>
+🔑 Admin Panel <br>
+
+Access the admin panel at: <br>
+http://127.0.0.1:8000/admin <br><br>
+
+Create an admin user: <br>
+python manage.py createsuperuser <br><br>
+
+Log in to the admin panel to add and manage hotel information. <br><br>
+
+🏨 Viewing Hotel Information <br>
+The homepage displays a table containing dynamically added hotels' names, prices, locations, and descriptions. <br><br>
+
+📄 Hotel Details <br>
+The hotel detail page is designed to include the hotel's name, price, location, description, and multiple images. <br><br>
+
+📂 Project Structure <br><br>
+
+tuay_turizm/ <br>
+├── manage.py <br>
+├── tuay_turizm/ <br>
+│ ├── init.py <br>
+│ ├── settings.py <br>
+│ ├── urls.py <br>
+│ └── wsgi.py <br>
+├── app/ <br>
+│ ├── migrations/ <br>
+│ ├── init.py <br>
+│ ├── admin.py <br>
+│ ├── apps.py <br>
+│ ├── models.py <br>
+│ ├── tests.py <br>
+│ ├── views.py <br>
+│ ├── templates/ <br>
+│ │ ├── index.html <br>
+│ │ └── hotel_detail.html <br>
+│ └── static/ <br>
+│ ├── css/ <br>
+│ └── js/ <br>
+└── requirements.txt <br>
+
+✨ Features <br>
+🏨 Dynamic hotel addition and viewing <br>
+📄 Hotel detail page <br>
+🔧 Management via the admin panel <br>
+📸 Viewing multiple hotel images <br>
+🗂️ Integrated management with the database <br>
+
+📜 License
+This project is licensed under the MIT License. For more information, see the LICENSE file.
+
+📞 Contact
+For any questions or suggestions about the project, please contact Hamza Şengül.
