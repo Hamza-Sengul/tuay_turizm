@@ -9,7 +9,7 @@ Proje Yapısı
 Katkıda Bulunma
 Lisans
 İletişim
-🚀 Kurulum
+🚀 Kurulum <br>
 Projeyi yerel ortamınıza kurmak için aşağıdaki adımları izleyin:
 
 1. Bu depoyu yerel makinenize klonlayın:
